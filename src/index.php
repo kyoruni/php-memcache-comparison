@@ -23,7 +23,6 @@ foreach ($keys as $key => $value) {
 // キャッシュを取得して表示
 foreach ($keys as $key => $value) {
   $result = $memcache->get($key);
-  $type   = gettype($result);
 
   echo "$key: ";
   var_dump($result);
