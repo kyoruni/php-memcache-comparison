@@ -29,3 +29,8 @@ foreach ($keys as $key => $value) {
   var_dump($result);
   echo '<br>';
 }
+
+$result = $memcache->get('notExistKey');
+echo 'notExistKey: ';
+var_dump($result);
+echo '<br>';
