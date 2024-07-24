@@ -12,4 +12,6 @@ docker compose up -d
 ### （2） 動作確認
 - 以下にアクセス
 - PHP8.3： `http://localhost:8083/`
+- PHP8.0： `http://localhost:8080/`
+- PHP7.4： `http://localhost:8074/`
 - PHP7.3： `http://localhost:8073/`
