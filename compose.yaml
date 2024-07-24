@@ -1,0 +1,29 @@
+services:
+  memcached:
+    image: memcached:latest
+    container_name: memcached
+    ports:
+      - "11211:11211"
+  php83:
+    build:
+      context: ./php83
+    container_name: php83
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "8083:80"
+    depends_on:
+      - memcached
+    command: bash -c "php -S 0.0.0.0:80 -t /var/www/html"
+
+  php73:
+    build:
+      context: ./php73
+    container_name: php73
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "8073:80"
+    depends_on:
+      - memcached
+    command: bash -c "php -S 0.0.0.0:80 -t /var/www/html"
