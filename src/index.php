@@ -2,7 +2,7 @@
 echo 'PHP version: ' . phpversion() . '<br><br>';
 
 $memcache = new Memcache;
-$memcache->connect('memcached', 11211) or die ("Could not connect");
+$memcache->connect('memcached', 11211) or die ('Could not connect');
 
 $keys = [
   'stringKey'     => 'hogehoge',
